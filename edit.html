@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>포트폴리오 편집</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+    <!-- 제목 -->
+
+    <div class="card">
+
+        <h1>포트폴리오 편집</h1>
+
+        <div class="notice">
+            작성한 내용은 현재 브라우저의 localStorage에 저장됩니다.
+        </div>
+
+    </div>
+
+
+
+    <!-- 기본 정보 -->
+
+    <div class="card">
+
+        <h2>기본 정보</h2>
+
+
+        <div class="field">
+
+            <label for="name">
+                이름
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="이름을 입력하세요"
+            >
+
+        </div>
+
+
+        <div class="field">
+
+            <label for="age">
+                나이
+            </label>
+
+            <input
+                type="number"
+                id="age"
+                placeholder="나이를 입력하세요"
+            >
+
+        </div>
+
+
+        <div class="field">
+
+            <label for="gender">
+                성별
+            </label>
+
+            <input
+                type="text"
+                id="gender"
+                placeholder="성별을 입력하세요"
+            >
+
+        </div>
+
+    </div>
+
+
+
+    <!-- 개인정보 -->
+
+    <div class="card">
+
+        <h2>개인정보 공개 설정</h2>
+
+        <p class="description">
+            공개를 선택한 정보만 공개 페이지에 포함됩니다.
+        </p>
+
+
+        <!-- 이메일 -->
+
+        <div class="field">
+
+            <label for="email">
+                이메일
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="이메일을 입력하세요"
+            >
+
+
+            <div class="visibility">
+
+                <button
+                    type="button"
+                    id="email-public"
+                    onclick="setVisibility('email', true)"
+                >
+                    공개
+                </button>
+
+
+                <button
+                    type="button"
+                    id="email-private"
+                    onclick="setVisibility('email', false)"
+                >
+                    비공개
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 전화번호 -->
+
+        <div class="field">
+
+            <label for="phone">
+                전화번호
+            </label>
+
+            <input
+                type="text"
+                id="phone"
+                placeholder="전화번호를 입력하세요"
+            >
+
+
+            <div class="visibility">
+
+                <button
+                    type="button"
+                    id="phone-public"
+                    onclick="setVisibility('phone', true)"
+                >
+                    공개
+                </button>
+
+
+                <button
+                    type="button"
+                    id="phone-private"
+                    onclick="setVisibility('phone', false)"
+                >
+                    비공개
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 주소 -->
+
+        <div class="field">
+
+            <label for="address">
+                주소
+            </label>
+
+            <input
+                type="text"
+                id="address"
+                placeholder="주소를 입력하세요"
+            >
+
+
+            <div class="visibility">
+
+                <button
+                    type="button"
+                    id="address-public"
+                    onclick="setVisibility('address', true)"
+                >
+                    공개
+                </button>
+
+
+                <button
+                    type="button"
+                    id="address-private"
+                    onclick="setVisibility('address', false)"
+                >
+                    비공개
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- 경력 -->
+
+    <div class="card">
+
+        <h2>경력</h2>
+
+        <textarea
+            id="career"
+            placeholder="경력, 활동, 프로젝트 등을 작성하세요."
+        ></textarea>
+
+    </div>
+
+
+
+    <!-- 강점 -->
+
+    <div class="card">
+
+        <h2>강점</h2>
+
+        <textarea
+            id="strength"
+            placeholder="나의 강점을 작성하세요."
+        ></textarea>
+
+    </div>
+
+
+
+    <!-- 취향 -->
+
+    <div class="card">
+
+        <h2>취향</h2>
+
+        <textarea
+            id="taste"
+            placeholder="좋아하는 것, 관심사 등을 작성하세요."
+        ></textarea>
+
+    </div>
+
+
+
+    <!-- 각오 -->
+
+    <div class="card">
+
+        <h2>각오</h2>
+
+        <textarea
+            id="determination"
+            placeholder="앞으로의 목표와 각오를 작성하세요."
+        ></textarea>
+
+    </div>
+
+
+
+    <!-- 버튼 -->
+
+    <div class="card">
+
+        <div class="action-buttons">
+
+
+            <button
+                class="save-button"
+                type="button"
+                onclick="saveProfile()"
+            >
+                저장
+            </button>
+
+
+            <button
+                class="preview-button"
+                type="button"
+                onclick="goToPortfolio()"
+            >
+                포트폴리오 보기
+            </button>
+
+
+            <button
+                class="generate-button"
+                type="button"
+                onclick="generatePublicPage()"
+            >
+                공개 페이지 생성
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
