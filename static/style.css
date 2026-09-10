@@ -1,0 +1,79 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #222;
+    background-color: #fdfdfd;
+    margin: 0;
+    padding: 0;
+}
+
+.portfolio-page {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.portfolio-container {
+    width: 100%;
+    max-width: 700px;
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
+
+.portfolio-hero {
+    margin-bottom: 30px;
+}
+
+.hero-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.profile-name {
+    font-size: 32px;
+    margin: 0 0 10px 0;
+}
+
+.basic-info span {
+    margin-right: 10px;
+    color: #555;
+}
+
+.portfolio-section {
+    margin-bottom: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.section-label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-item {
+    display: flex;
+    font-size: 14px;
+}
+
+.contact-label {
+    width: 90px;
+    color: #555;
+    font-weight: 600;
+}
+
+.section-content {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
