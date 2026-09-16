@@ -67,3 +67,9 @@ node_modules/
 
 # dataconnect generated files
 .dataconnect
+# Git 무시 목록
+serviceAccountKey.json
+__pycache__/
+*.pyc
+.env
+venv/
